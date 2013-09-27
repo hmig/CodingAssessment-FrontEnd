@@ -4,20 +4,20 @@
 		<title>GiftCards.com - Coding Assessment - Front End Developers</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		<link href="css/layout.css" rel="stylesheet">
 		
 		
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<header>
 			<div class="row-fluid">
 				<div class="span12">
 					<div class="container">
-						<div class="row" style="margin:10px auto;">
+						<div class="row">
 							<div class="span8 navigation-container">
 								<ul>
 									<li><a href="/">Home</a></li>
@@ -41,7 +41,7 @@
 		<div class="container homepage-attention">
 			<div class="row">
 				<div class="span12">
-					<a href="/"><img src="images/logo.png" alt="Grizzlies Logo" style="padding:5px;" /></a>
+					<a href="/"><img src="images/logo.png" id="logo" alt="Grizzlies Logo" /></a>
 				</div>
 			</div>
 			<div class="row">
@@ -65,12 +65,6 @@
 					<div id="news">
 						<h2>News</h2>
 						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th>Date</th>
-									<th>Information</th>
-								</tr>
-							</thead>
 							<tbody>
 								<tr>
 									<td>10/15/2013</td>
@@ -106,7 +100,64 @@
 				</div>
 				<div class="span4" id="league-standings">
 					<h2>League Standings</h2>
-					Standings table should be here
+					<table class="table">
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>Pittsburgh Grizzles</td>
+                                    <td>(50)</td>
+                                    <td>84</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Aalborg Pirates</td>
+                                    <td>(47)</td>
+                                    <td>82</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Miami Ducks</td>
+                                    <td>(46)</td>
+                                    <td>78</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>Philadelphia Lions</td>
+                                    <td>(43)</td>
+                                    <td>75</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>Brooklyn Spartans</td>
+                                    <td>(40)</td>
+                                    <td>74</td>
+								</tr>
+                                <tr>
+									<td>6</td>
+									<td>New Jersey Foxes</td>
+                                    <td>(39)</td>
+                                    <td>73</td>
+								</tr>
+                                <tr>
+									<td>7</td>
+									<td>Wheeling Vipers</td>
+                                    <td>(38)</td>
+                                    <td>72</td>
+								</tr>
+                                <tr>
+									<td>8</td>
+									<td>Columbus Bulldogs</td>
+                                    <td>(37)</td>
+                                    <td>71</td>
+								</tr>
+                                <tr>
+									<td>9</td>
+									<td>Cleveland Wasps</td>
+                                    <td>(36)</td>
+                                    <td>68</td>
+								</tr>
+							</tbody>
+						</table>
 				</div>
 			</div>
 		</div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="App" >
 	<head>
 		<title>GiftCards.com - Schedule - Coding Assessment - Front End Developers</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,7 +10,9 @@
 		
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
 		<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+		<script src="stats.js"></script>
 	</head>
 	<body>
 		<header>
@@ -48,55 +50,55 @@
 			<div class="row">
 				<div class="span12">
 					<div class="content-padding">
-						<h1 id="Contact&Us">Contact Us</h1>
-                        	<fieldset>
-                                <label>Your Name</label>
-								<input type="text" name="fullname" id="FullName" size="25" class="required" />
-                                <span class="example_entry">Example: John Doe</span>
-						    <!--Usability: for an online contact form, I would not request the submitters address unless absolutely necessary.-->
-							<!--<tr name="Address Fields">
-								<td alt="First Name Field" width="150"><label>Address 1</label></td>
-								<td width="450">
-									<input type="text" name="address" id="address" />
-								</td>
-							</tr>
-							<tr>
-								<td>Address Line 2</td>
-								<td>
-									<input type="text" name="first-name" />
-								</td>
-							</tr>
-							<tr>
-								<td>City</td>
-								<td>
-									<input type="text" name="first-name" />
-								</td>
-							</tr>
-							<tr>
-								<td>State</td>
-								<td>
-									<input type="text" name="first-name" />
-								</td>
-							</tr>
-							<tr>
-								<td>Zip Code</td>
-								<td>
-									<input type="text" name="first-name" />
-								</td>
-							</tr>
-							<tr>
-								<td>Phone Number</td>
-								<td>
-									<input type="text" name="first-name" />
-								</td>
-							</tr>-->
-							<label>E-Mail Address</label>
-							<input type="email" name="Email" id="Email" size="25" maxlength="50" class="required email"> 
-	
-							<label>Comments</label>
-							<textarea name="comments" rows="8" style="width:85%;" class="required"></textarea>
-							<input type="submit" value="Submit" />
-						</fieldset>
+						<h1>Team Statistics</h1>
+                        <div class="span3">
+                          <span>Filter by text:</span>
+                          <input type="text" id="query" ng-model="query" />
+                        </div>
+                        <div class="span3">
+                          <span> Order by: </span>
+                          <select ng-model="orderList">
+                            <option value="name">Name</option>
+                            <option value="number">Number</option>
+                            <option value="position">Position</option>
+                            <option value="GP">GP</option>
+                            <option value="G">G</option>
+                            <option value="A">A</option>
+                          </select>
+                        </div>
+                        <div class="span3">
+                          <span > Show: </span>
+                          <select ng-model="limit">
+                            <option value="5">5 per page</option>
+                            <option value="10">10 per page</option>
+                            <option value="15">15 per page</option>
+                            <option value="20">20 per page</option>
+                          </select>
+                        </div>
+						<table class="table table-striped"  ng-controller="StatsCtrl">
+                       
+							<thead>
+								<tr>
+									<th> Number</th>
+									<th>Name</th>
+									<th>Position</th>
+									<th>GP</th>
+									<th>G</th>
+									<th>A</th>
+								</tr>
+							</thead>
+							<tbody>
+				  				<tr ng-repeat="stats in stats | filter:query | orderBy:orderList | limitTo:limit ">
+									<td> {{stats.number}} </td>
+									<td>{{stats.name}}</td>
+									<td>{{stats.position}}</td>
+									<td>{{stats.GP}}</td>
+									<td>{{stats.G}}</td>
+									<td>{{stats.A}}</td>
+								</tr>
+								
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>

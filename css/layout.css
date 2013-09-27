@@ -1,6 +1,7 @@
 body {
 	background-color:#000;
 	font-size:14px;
+	font-family: "Courier New", Courier, monospace;/*not sure what the correct font is in the mockup*/
 }
 
 ul {
@@ -58,6 +59,10 @@ header, footer {
 	background-image:url('../images/backgrounds/homepage.png');
 	padding-bottom:10px;
 }
+#logo {
+    max-width: 315px;
+    width: 100%;
+}
 
 .homepage-attention .secondary-content {
 	background-color:rgba(255,255,255,.9);
@@ -77,15 +82,19 @@ header, footer {
 #next-game {
 	padding:5px;
 }
-#next-game h2 {
+#next-game h2, #league-standings h2{
 	background-color:#17575c;
+}
+#next-game h2, #league-standings h2, #news h2 {
 	color:#fff;
+}
+#news h2{
+	background-color:#6d3535;
+}
+#league-standings h2, #news h2 {
+	text-transform:uppercase;
 }
 
-#news h2 {
-	background-color:#6d3535;
-	color:#fff;
-}
 
 footer ul {
 	list-style-type: none;
@@ -99,5 +108,56 @@ footer .navigation-container {
 }
 
 .team-members .player {
-	width:180px;
+	height: 265px;
+    padding: 0 0.5em 0.5em 0;
+    width: 180px;
 }
+
+fieldset{
+	width: 90%;
+	padding: 1em;
+}
+
+label{
+	padding:1em 0 0;
+}
+
+label, input, .example_entry, textarea{
+	float:left;
+	clear:both;
+}
+
+
+.example_entry{
+	font-size: 10px;
+    font-style: italic;
+    padding: 5px;
+
+}
+
+img{
+	padding:5px;
+}
+.content-padding{
+	padding:5px;
+}
+
+header div.row{
+	margin:10px auto;
+}
+
+.span3 span, .span3 select, .span3 input {
+    clear: both;
+    float: left;
+    width: 90%;
+}
+
+/**BOOTSTRAP OVERRIDES**/
+.table th, .table td{
+	border:0px;
+}
+
+.table-striped tbody > tr:nth-child(2n+1) > td, .table-striped tbody > tr:nth-child(2n+1) > th {
+    background-color: #DDDDDD;
+}
+
